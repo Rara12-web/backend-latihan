@@ -2,7 +2,7 @@ const express = require("express");
 
 const app = express();
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.get("/", (req, res) => {
     res.send(`Backend ${process.env.APP_NAME} berhasil berjalan!`);
@@ -16,5 +16,5 @@ app.get("/api/hello", (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server berjalan di http://localhost:${PORT}`);
+    console.log(`Server berjalan di port ${PORT}`);
 });
