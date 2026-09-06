@@ -5,7 +5,7 @@ const app = express();
 const PORT = 3000;
 
 app.get("/", (req, res) => {
-    res.send("Backend NourishVision berhasil berjalan!");
+    res.send(`Backend ${process.env.APP_NAME} berhasil berjalan!`);
 });
 
 app.get("/api/hello", (req, res) => {
